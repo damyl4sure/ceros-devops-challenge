@@ -1,0 +1,5 @@
+aws_credentials_file = "~/.aws/credentials"
+aws_profile = "lab2022"
+aws_region = "us-east-1"
+repository_url = "169462852566.dkr.ecr.us-east-1.amazonaws.com/ceros-ski"
+public_key_path = "~/.ssh/damyl-az-devops.pub"

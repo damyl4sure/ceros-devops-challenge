@@ -18,7 +18,10 @@ WORKDIR /usr/src/app
 
 COPY --from=builder /usr/src/app ./
 
+# Start with rootless user
 USER $USER
 
 ENTRYPOINT ["npm", "start"]
+
+# Conntainer port
 EXPOSE 8080

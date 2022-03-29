@@ -30,6 +30,12 @@ resource "aws_security_group" "alb" {
 
 }
 
+/******************************************************************************
+* ALB Resoureces
+*******************************************************************************/
+/**
+* A ALB to load balace traffic to backend target group.
+*/
 
 resource "aws_lb" "alb" {  
   name            = "ceros-ski-${var.environment}-backend"
@@ -47,7 +53,7 @@ resource "aws_lb" "alb" {
   }
 }
 
-/** Introduced ALB due to IAM roles are only valid for services configured to use load balancers error **/
+/** Create target group **/
 
 resource "aws_lb_target_group" "cluster" {
   name     = "ceros-ski-${var.environment}-backend"

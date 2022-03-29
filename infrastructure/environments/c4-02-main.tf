@@ -304,6 +304,8 @@ resource "aws_ecs_service" "backend" {
   }
 }
 
+# Attach autoscalling group to ALB backend target
+
 resource "aws_autoscaling_attachment" "asg_attachment_bar" {
   autoscaling_group_name = "${aws_autoscaling_group.cluster.id}"
   alb_target_group_arn   = "${aws_lb_target_group.cluster.arn}"
