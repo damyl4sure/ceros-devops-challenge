@@ -1,5 +1,5 @@
 FROM node:15 as builder
-LABEL ceros-devops-code-challenhe-main.com=frontend
+LABEL ceros-devops-code-challenge-main.com=frontend
 
 WORKDIR /usr/src/app
 

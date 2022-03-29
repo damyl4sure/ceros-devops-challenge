@@ -53,7 +53,6 @@ resource "aws_lb_target_group" "cluster" {
   name     = "ceros-ski-${var.environment}-backend"
   port     = 8080
   protocol = "HTTP"
-  #target_type = "ip"
   vpc_id   = module.vpc.vpc_id
 
   health_check {
@@ -101,10 +100,3 @@ resource "aws_lb_listener_rule" "static" {
     }
   }
 }
-
-
-# resource "aws_lb_target_group_attachment" "cluster" {
-#   target_group_arn = aws_ecs_cluster.cluster.arn
-#   target_id        = aws_ecs_cluster.cluster.id
-#   port             = 8080
-# }
